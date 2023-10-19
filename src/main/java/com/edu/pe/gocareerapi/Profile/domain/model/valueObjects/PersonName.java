@@ -1,11 +1,11 @@
-package com.edu.pe.gocareerapi.User.domain.model.valueObjects;
+package com.edu.pe.gocareerapi.Profile.domain.model.valueObjects;
 
-public record UserName(String firstName, String lastName) {
-    public UserName(){
+public record PersonName(String firstName, String lastName) {
+    public PersonName(){
         this(null,null);
     }
 
-    public UserName{
+    public PersonName {
         if(firstName == null || firstName.isBlank()){
             throw new IllegalArgumentException("First name cannot be blank");
         }
@@ -15,7 +15,7 @@ public record UserName(String firstName, String lastName) {
         }
     }
 
-    public String getUserName(){
+    public String getPersonName(){
         return firstName + " " + lastName;
     }
 }

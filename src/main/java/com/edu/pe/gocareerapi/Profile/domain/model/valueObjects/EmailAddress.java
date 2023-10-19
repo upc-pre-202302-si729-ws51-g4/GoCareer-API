@@ -1,4 +1,4 @@
-package com.edu.pe.gocareerapi.User.domain.model.valueObjects;
+package com.edu.pe.gocareerapi.Profile.domain.model.valueObjects;
 
 import jakarta.validation.constraints.Email;
 

@@ -1,4 +1,4 @@
-package com.edu.pe.gocareerapi.User.domain.shared.model;
+package com.edu.pe.gocareerapi.shared.model;
 
 
 import jakarta.persistence.MappedSuperclass;
