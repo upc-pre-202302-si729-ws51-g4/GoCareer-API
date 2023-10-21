@@ -4,13 +4,13 @@ import jakarta.persistence.Embeddable;
 
 
 @Embeddable
-public record StudentId(Integer studentId) {
+public record ProfileId(Integer studentId) {
 
-    public StudentId(){
+    public ProfileId(){
         this(null);
     }
 
-    public StudentId{
+    public ProfileId {
         if (studentId < 0){
             throw new IllegalArgumentException("Student ID cannot be negative");
         }
