@@ -13,6 +13,7 @@ public class Question extends AuditableModel {
     @Getter
     private Integer id;
 
+    @Getter
     private String content;
 
     @Embedded
