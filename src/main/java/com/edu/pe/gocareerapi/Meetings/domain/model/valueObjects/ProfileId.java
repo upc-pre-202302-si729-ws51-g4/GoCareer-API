@@ -4,10 +4,10 @@ import jakarta.persistence.Embeddable;
 
 
 @Embeddable
-public record ProfileId(Integer studentId) {
+public record ProfileId(Long studentId) {
 
     public ProfileId(){
-        this(null);
+        this(0L);
     }
 
     public ProfileId {
