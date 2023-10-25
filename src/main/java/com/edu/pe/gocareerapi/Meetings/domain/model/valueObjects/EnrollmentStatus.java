@@ -1,4 +1,4 @@
-package com.edu.pe.gocareerapi.CareerTest.domain.model.valueObjects;
+package com.edu.pe.gocareerapi.Meetings.domain.model.valueObjects;
 
 public enum EnrollmentStatus {
     CONFIRMED,
