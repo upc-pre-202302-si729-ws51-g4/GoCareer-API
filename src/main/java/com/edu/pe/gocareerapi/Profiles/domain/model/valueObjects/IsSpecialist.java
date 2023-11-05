@@ -1,4 +1,4 @@
-package com.edu.pe.gocareerapi.Profile.domain.model.valueObjects;
+package com.edu.pe.gocareerapi.Profiles.domain.model.valueObjects;
 
 public record IsSpecialist(Boolean isSpecialist) {
     public IsSpecialist(){
