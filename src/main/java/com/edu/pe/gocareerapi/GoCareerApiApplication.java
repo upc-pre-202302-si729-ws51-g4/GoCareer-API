@@ -7,10 +7,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @EnableJpaAuditing
 @SpringBootApplication
-public class GocareerApiApplication {
+public class GoCareerApiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(GocareerApiApplication.class, args);
+        SpringApplication.run(GoCareerApiApplication.class, args);
     }
 
 }
