@@ -1,10 +1,10 @@
-package com.edu.pe.gocareerapi.Profile.domain.model.aggregates;
+package com.edu.pe.gocareerapi.Profiles.domain.model.aggregates;
 
 
-import com.edu.pe.gocareerapi.Profile.domain.model.valueObjects.EmailAddress;
-import com.edu.pe.gocareerapi.Profile.domain.model.valueObjects.IsSpecialist;
-import com.edu.pe.gocareerapi.Profile.domain.model.valueObjects.PersonDescription;
-import com.edu.pe.gocareerapi.Profile.domain.model.valueObjects.PersonName;
+import com.edu.pe.gocareerapi.Profiles.domain.model.valueObjects.EmailAddress;
+import com.edu.pe.gocareerapi.Profiles.domain.model.valueObjects.IsSpecialist;
+import com.edu.pe.gocareerapi.Profiles.domain.model.valueObjects.PersonDescription;
+import com.edu.pe.gocareerapi.Profiles.domain.model.valueObjects.PersonName;
 import jakarta.persistence.*;
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
@@ -20,7 +20,7 @@ public class Profile extends AbstractAggregateRoot<Profile> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter
-    private Integer id;
+    private Long id;
 
     @Embedded
     private PersonName name;
@@ -64,6 +64,8 @@ public class Profile extends AbstractAggregateRoot<Profile> {
     public String getFullName(){
         return name.getPersonName();
     }
+
+    public String getEmailAddress(){ return email.address();}
 
     public String getDescription(){
         return description.getPersonDescription();
