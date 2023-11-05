@@ -1,8 +1,7 @@
 package com.edu.pe.gocareerapi.Meetings.domain.model.aggregates;
 
 import com.edu.pe.gocareerapi.Meetings.domain.model.valueObjects.ProfileId;
-import com.edu.pe.gocareerapi.Meetings.domain.model.valueObjects.StudentId;
-import com.edu.pe.gocareerapi.Profile.domain.model.aggregates.Profile;
+import com.edu.pe.gocareerapi.Meetings.domain.model.valueObjects.StudentRecordId;
 import com.edu.pe.gocareerapi.shared.model.AuditableModel;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -14,21 +13,25 @@ public class Student extends AuditableModel {
     @Getter
     private Long id;
 
+    @Getter
     @Embedded
     @Column(name = "student_id")
-    private StudentId studentId;
+    private StudentRecordId studentRecordId;
 
     @Embedded
     private ProfileId profileId;
 
     public Student(){
-        this.studentId = new StudentId();
+        this.studentRecordId = new StudentRecordId();
     }
 
     public Student(Long profileId){
         this();
         this.profileId = new ProfileId(profileId);
-        this.studentId = new StudentId();
     }
+
+    public String getStudentRecordId(){ return this.studentRecordId.studentRecordId();}
+
+    public Long getProfileId(){ return this.profileId.id(); }
 
 }
