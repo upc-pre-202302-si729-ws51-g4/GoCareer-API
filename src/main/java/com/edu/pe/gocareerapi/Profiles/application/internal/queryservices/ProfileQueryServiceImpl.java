@@ -6,10 +6,12 @@ import com.edu.pe.gocareerapi.Profiles.domain.model.queries.GetProfileByEmailQue
 import com.edu.pe.gocareerapi.Profiles.domain.model.queries.GetProfileByIdQuery;
 import com.edu.pe.gocareerapi.Profiles.domain.services.ProfileQueryService;
 import com.edu.pe.gocareerapi.Profiles.infrastructure.persistence.jpa.repositories.ProfileRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class ProfileQueryServiceImpl implements ProfileQueryService {
 
     private final ProfileRepository profileRepository;
